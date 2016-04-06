@@ -11,6 +11,13 @@ namespace HelloXamarin
     {
         public App()
         {
+            Button btn = new Button();
+            btn.Text = "XBox One Rules!";
+            btn.Clicked += (sender, args) =>
+            {
+                btn.Text = "I heart XBox One!";
+            };
+
             // The root page of your application
             MainPage = new ContentPage
             {
@@ -21,7 +28,8 @@ namespace HelloXamarin
                         new Label {
                             XAlign = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!"
-                        }
+                        },
+                        btn
                     }
                 }
             };

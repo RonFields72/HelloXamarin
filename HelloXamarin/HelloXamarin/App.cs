@@ -11,11 +11,18 @@ namespace HelloXamarin
     {
         public App()
         {
-            Button btn = new Button();
-            btn.Text = "XBox One Rules!";
-            btn.Clicked += (sender, args) =>
+            Button btnXBox = new Button();
+            btnXBox.Text = "XBox One Rules!";
+            btnXBox.Clicked += (sender, args) =>
             {
-                btn.Text = "I heart XBox One!";
+                btnXBox.Text = "I heart XBox One!";
+            };
+
+            Button btnPS4 = new Button();
+            btnPS4.Text = "PS4 Rules!";
+            btnPS4.Clicked += (sender, args) =>
+            {
+                btnPS4.Text = "I heart Playstation 4!";
             };
 
             // The root page of your application
@@ -26,10 +33,11 @@ namespace HelloXamarin
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
                         new Label {
-                            XAlign = TextAlignment.Center,
+                            HorizontalTextAlignment = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!"
                         },
-                        btn
+                        btnXBox,
+                        btnPS4
                     }
                 }
             };
